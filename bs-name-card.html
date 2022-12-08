@@ -8,8 +8,19 @@
   <title>Document</title>
   <link rel="stylesheet" href="./CSS/bootstrap.css">
   <style>
+    /* html,
+    body {
+      height: 100%;
+    } */
+
+    .container {
+      height: 100vh;
+    }
+
+    .row,
+    .col,
     .card {
-      height: 70%;
+      height: 100%;
     }
 
     .card-job {
@@ -25,37 +36,69 @@
 
     .card-img {
       width: 100%;
-      height: 50%;
+      height: 60%;
+    }
+
+    .card-body {
+      height: 40%;
     }
 
     .card-img img {
       width: 100%;
       height: 100%;
-      object-fit: fill;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    @media (min-width: 576px) {
+      .container {
+        width: 100%;
+        height: 70vh;
+      }
+
+      .card-img {
+        width: 40%;
+        height: 100%;
+      }
+
+      .card-body {
+        width: 60%;
+        height: 100%;
+      }
+
+      .mt-md-5 {
+        margin-top: 6rem !important;
+      }
+
+      .card-title {
+        font-size: 64px;
+      }
     }
   </style>
 </head>
 
-<body>
-  <div class="container">
+<body class="pt-sm-5">
+  <div class="container mt-sm-5 ">
     <div class="row">
       <div class="col">
-        <div class="card">
+        <div class="card flex-sm-row flex-sm-nowrap justify-content-evenly">
           <div class="card-img">
             <img src="./pexels-max-andrey-free.jpg">
           </div>
-          <div class="card-body">
+          <div class="card-body d-md-inline-flex flex-column justify-content-center ps-sm-5">
             <p class="card-job text-muted">Front-end Designer</p>
-            <h1 class="card-title">Alanna Kang</h1>
+            <h1 class="card-title">
+              Alanna Kang
+            </h1>
             <h5>Personal studio</h5>
             <br>
             <br>
             <br>
             <p class="card-text">
-              Address：No. 55-1, Zhiyuan New Vil., Taishan Dist., New Taipei City,24302 Taiwan (R.O.C.)
-            <p class="card-text">Tel：00-0011-1100</p>
-            <p class="card-text">E-Mail : Alanna@example.cc</p>
-            <p class="card-text">Website：http://www.alanna.example.cc/</p>
+              Address：No. 55-1, Zhiyuan New Vil., Taishan Dist., New Taipei City,24302 Taiwan (R.O.C.)<br>
+              Tel：00-0011-1100<br>
+              E-Mail : Alanna@example.cc<br>
+              Website：http://www.alanna.example.cc/
             </p>
           </div>
         </div>
